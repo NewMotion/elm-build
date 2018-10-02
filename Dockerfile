@@ -1,6 +1,6 @@
 FROM node:8.2-slim
 
-MAINTAINER Konstantin Alexandroff <k.alexandroff@gmail.com>
+MAINTAINER ti@newmotion.com
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -14,4 +14,4 @@ RUN apt-get -y install git \
 	&& npm install -g --unsafe-perm elm-test@0.18 \
 	&& npm install -g --unsafe-perm bower \
 	&& npm install -g --unsafe-perm elm-github-install \
-	&& npm install --save elm-webpack-loader
+	&& npm install --save elm-webpack-loader@4.4.0
