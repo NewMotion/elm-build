@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:lts-jessie-slim
 
 MAINTAINER ti@newmotion.com
 
