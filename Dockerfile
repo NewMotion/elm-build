@@ -1,4 +1,4 @@
-FROM node:8.2-slim
+FROM node:lts-alpine
 
 MAINTAINER ti@newmotion.com
 
@@ -9,9 +9,5 @@ RUN /bin/bash -c "echo 'deb http://ppa.launchpad.net/git-core/ppa/ubuntu trusty 
 RUN apt-get update 
 
 RUN apt-get -y install git \
-	&& npm install -g --unsafe-perm webpack file-loader \
 	&& npm install -g --unsafe-perm elm@0.18 \
-	&& npm install -g --unsafe-perm elm-test@0.18 \
-	&& npm install -g --unsafe-perm bower \
-	&& npm install -g --unsafe-perm elm-github-install \
-	&& npm install --save elm-webpack-loader@4.4.0
+	&& npm install -g --unsafe-perm elm-github-install
